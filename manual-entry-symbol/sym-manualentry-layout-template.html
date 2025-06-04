@@ -1,0 +1,145 @@
+<div id="layout" class="noExpandSelector" style = "width: 100%; height: calc(100% - 27px);"></div>
+
+<style>
+	{{config.layoutId}} .w2ui-grid .w2ui-grid-records table tr td div {
+		white-space: normal !important;
+		word-wrap: break-word;
+		height: auto;
+		overflow: visible;
+		max-height: max-content !important;
+	}
+	{{config.layoutId}} .w2ui-grid-records::-webkit-scrollbar {
+		-webkit-appearance: none;
+		width: 7px;
+	}
+	{{config.layoutId}} .w2ui-grid-records::-webkit-scrollbar-thumb {
+		border-radius: 5px;
+		background-color: {{config.isDarkMode ? 'rgba(220,220,220,0.8);' : 'rgba(169,169,169,0.8);'}};
+		-webkit-box-shadow: 0 0 1px rgba(255,255,255,0.5);
+	}
+	{{config.layoutId}} .w2ui-grid-records::-webkit-scrollbar-thumb:hover {
+		background-color: {{config.isDarkMode ? 'rgba(169,169,169,0.8);' : 'rgba(220,220,220,0.8);'}};
+	}
+	{{config.layoutId}} .w2ui-grid-records {
+		{{config.isDarkMode ? 'background-color: #4e4e4e !important;' : null}};
+	}
+	{{config.layoutId}}{
+		{{config.isDarkMode ? 'color: white;' : null}};
+	}
+	{{config.layoutId}} .w2ui-toolbar {
+		{{config.isDarkMode ? 'background-color: #4e4e4e !important;' : null}};
+	}
+	{{config.layoutId}} .w2ui-form .w2ui-form-header, .w2ui-buttons {
+		{{config.isDarkMode ? 'background-color: #4e4e4e !important; color: white;' : null}};
+	}
+	{{config.layoutId}} .w2ui-form .w2ui-page {
+		{{config.isDarkMode ? 'background-color: #303030 !important;' : null}};
+	}
+	{{config.layoutId}} .w2ui-form .w2ui-page label {
+		{{config.isDarkMode ? 'color: white;' : null}};
+		{{config.isTableView ? 'margin-bottom: 15px; width: 100%;' : 'width: calc(100% - 250px);'}}
+		margin-left: 10px;
+		text-align: left;
+	}
+	{{config.layoutId}} .w2ui-form .w2ui-field {
+		{{config.isTableView 
+		? 	'
+				display: flex;
+				flex-direction: column;
+			' 
+		: 	'
+				height: 40px;
+			'
+		}}
+	}
+	{{config.layoutId}} .w2ui-form .w2ui-column {
+		{{config.isTableView 
+		? 	'
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			' 
+		: null
+		}}
+	}
+	{{config.layoutId}} .w2ui-form .w2ui-field>div {
+		{{config.isTableView ? 'margin-left: 0 !important;' : null}}
+	}
+	{{config.layoutId}} .w2ui-form .w2ui-page {
+		{{config.isTableView ? null : 'overflow-x: hidden;'}}
+	}
+	{{config.layoutId}} .w2ui-form .w2ui-page .w2ui-group-title {
+		width: 100%;
+		display: flex;
+		margin-left: 128px;
+		margin-bottom: -40px;
+	}
+	.w2ui-field.w2ui-required:not(.w2ui-field-inline)>div::before {
+		{{config.isTableView ?
+			'margin-top: -15px;
+			margin-left: -35px;' :
+			'margin-top: 8px;
+			margin-left: -178px;
+			right: 242px;
+			top: 7px;'
+		}}
+	}
+	.picker-error{
+		border:1px solid #ff3b30!important;
+		box-shadow:0 0 6px #ff3b30;
+	}
+	{{config.layoutId}} .w2ui-head{
+		{{config.isDarkMode 
+			? 	'	
+					color: white;
+					border-bottom: 1px solid rgba(48, 48, 48, .35) !important;
+					border-right: 1px solid rgba(48, 48, 48, .35) !important;
+					background: linear-gradient(to bottom,#838383 0,#686868 33%,#303030 100%) !important;
+				' 
+			: null
+		}};
+	}
+	{{config.layoutId}} .w2ui-selected{
+		color: {{config.selectTextColor}} !important;
+		background-color: {{config.selectBgcColor}} !important;
+	}
+	{{config.layoutId}} .w2ui-col-header{
+		{{config.isDarkMode 
+			? 	'	
+					color: white;
+					border-right: 1px solid rgba(48, 48, 48, .35) !important;
+				' 
+			: null
+		}};
+	}
+	{{config.layoutId}} .w2ui-odd{
+		{{config.isDarkMode 
+			? 	'	
+					background-color: #303030;
+					border-bottom: 1px solid #505050 !important;
+				' 
+			: null
+		}};
+	}
+	{{config.layoutId}} .w2ui-even{
+		{{config.isDarkMode 
+			? 	'	
+					background-color: #4e4e4e;
+					border-bottom: 1px solid #505050 !important;
+				' 
+			: null
+		}};
+	}
+	{{config.layoutId}} .w2ui-grid-data{
+		{{config.isDarkMode ? 'border-right: 1px solid #505050 !important;' : null}};
+	}
+	{{config.layoutId}} .w2ui-grid-footer{
+		{{config.isDarkMode 
+			? 	'	
+					color: white !important;
+					background-color: #4e4e4e !important;
+				' 
+			: null
+		}};
+	}
+</style>
